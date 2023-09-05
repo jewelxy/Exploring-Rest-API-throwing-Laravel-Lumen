@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "623186d6-4aac-4deb-b352-599a4544ac19",
+		"name": "LearningLumenn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26986534"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/jewel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jewel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "requiredParameter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/name/rana",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"name",
+						"rana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "optionalParameter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/jewel/28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jewel",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BasicController",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/controller",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/controller/value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/controller/value",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controller",
+						"value"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResponseInBody",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/controllerResponse/Bangladesh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllerResponse",
+						"Bangladesh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "headerResponse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/controllerHeadResponse/Bangladesh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllerHeadResponse",
+						"Bangladesh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jsonSimpleArray",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/jsonSimple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jsonSimple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jsonAssociativeArray",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/jsonAss",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jsonAss"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "methodRedirect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/redirect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"redirect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "methodDownload",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "responseCatch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "name",
+						"value": "jewel",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/catch?name=jewel&age=28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"catch"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "jewel"
+						},
+						{
+							"key": "age",
+							"value": "28"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

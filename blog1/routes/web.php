@@ -24,4 +24,4 @@ $router->get('/test','MyController@dbConnection');
 $router->get('/details','DetailsController@DetailsSelect');
 $router->post('/details','DetailsController@DetailsCreate');
 $router->put('/details','DetailsController@DetailsUpdate');
-$router->delete('/details','DetailsController@DetailsDelete');
+$router->delete('/details/{id}','DetailsController@DetailsDelete');

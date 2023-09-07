@@ -16,7 +16,7 @@ class BuilderController extends Controller{
        $result =  DB::table('student_details')->get();
        return $result;
     } 
-
+ 
     //Retrive specificdata from table
 
     public function RetriveSpecificData($value){
@@ -32,4 +32,22 @@ class BuilderController extends Controller{
         */
         
     }
+
+
+    //Aggregrate query builder
+    public function AgregrateMethod(){
+
+        //Count how many rows in table
+        // $result = DB::table('student_details')->count();
+        // return $result;
+
+        //Count max and min data in table in column
+        // $result = DB::table('student_details')->min('roll');
+        // return $result;
+        
+        //Sum anverage data in table column
+        $result = DB::table('student_details')->sum('roll');
+        return $result;
+    }
+
 }

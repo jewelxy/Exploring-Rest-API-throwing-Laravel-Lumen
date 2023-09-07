@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "623186d6-4aac-4deb-b352-599a4544ac19",
+		"name": "QueryBuilderCRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26986534"
+	},
+	"item": [
+		{
+			"name": "studentDetailsSelect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/builder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"builder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpecificDataDisplayFromTable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/spcifydata/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spcifydata",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CountHowManyRowsInTable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/aggrigrate/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"aggrigrate",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "maxAndMinDataCountInCoumnTable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/aggrigrate/maxCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"aggrigrate",
+						"maxCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SumAvgCountInTable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/aggrigrate/sumAvg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"aggrigrate",
+						"sumAvg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD4Fetch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/fetch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD4Insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"Marzuk Rasel\",\r\n        \"roll\": \"45\",\r\n        \"class\": \"Ten\",\r\n        \"city\": \"Natore\",\r\n        \"phone\": \"01950814589\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD4Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 9,\r\n        \"name\": \"Marzuk Rasel\",\r\n        \"roll\": \"45\",\r\n        \"class\": \"Eleven\",\r\n        \"city\": \"Natore\",\r\n        \"phone\": \"01950814589\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRUD4Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/delete/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"delete",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

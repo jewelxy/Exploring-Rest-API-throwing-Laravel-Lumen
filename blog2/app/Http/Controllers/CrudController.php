@@ -1,5 +1,3 @@
-# Query Builder CRUD
-```
 <?php
 
 namespace App\Http\Controllers;
@@ -67,5 +65,3 @@ class CrudController extends Controller{
             }
     }
 }
-```
-

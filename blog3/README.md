@@ -4,6 +4,8 @@
 >Eloquent doesn't support put method untill v9
 <br/>
 >Front End Design Idea <a href='https://www.elementpack.pro/'>Link</a>
+
+<br/>
 ### Model Properties
 | Description | Query |
 | ------- | ----------- |

@@ -6,7 +6,8 @@
 >Front End Design Idea <a href='https://www.elementpack.pro/'>Link</a>
 
 <br/>
-### Model Properties
+
+# Model Properties
 
 ## `To define table name`  protected $table = 'table name'
 ## `To define primary column`  protected $primaryKey = 'id'

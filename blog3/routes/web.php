@@ -18,7 +18,9 @@ $router->get('/', function () use ($router) {
 });
 
 //Read data
-$router->get('/select', 'Student_Details_Controller@selectAll');
+// $router->get('/select', 'Student_Details_Controller@selectAll');
+$router->get('/select', ['middleware' => 'auth', 'uses'=>'Student_Details_Controller@selectAll']);
+
 $router->post('/select', 'Student_Details_Controller@selectByID');
 $router->post('/select/{id}', 'Student_Details_Controller@selectByIDBySlug');
 
@@ -32,3 +34,8 @@ $router->delete('/select/{id}','Student_Details_Controller@deleteBySlug');
 //Update Data
 $router->post('/update','Student_Details_Controller@updateData');
 $router->post('/update/{id}','Student_Details_Controller@updateDataBySlug');
+
+
+//User registration
+$router->post('/registration','Student_registration_controller@onRegister');
+$router->post('/login', 'Login_Controller@onLogin');

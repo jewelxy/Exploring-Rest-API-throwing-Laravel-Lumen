@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 use Illuminate\Http\Request;
 use App\Models\Student_Details_Model;
 
@@ -14,7 +15,6 @@ class Student_Details_Controller extends Controller
                 return $result;
 
         }
-
         //Select specific data by from value
         public function selectByID(Request $request){
                $id =  $request->input('id');
@@ -32,16 +32,23 @@ class Student_Details_Controller extends Controller
 
         //Insert data in table
         public function insertData(Request $request){
+                $token = $request->input('access_token');
+                $key = env('TOKEN_KEY');
+                // $decode = JWT::decode($token,$key,array('HS256'));
+                $decode = JWT::decode($token, new Key($key, 'HS256'));
+
+
                 $name = $request->input('name');
                 $roll = $request->input('roll');
                 $class = $request->input('class');
                 $city = $request->input('city');
                 $phone = $request->input('phone');
+                $email_address = $request->input('email_address');
 
-                $result = Student_Details_Model::insert(['name'=>$name,'roll'=>$roll,'class'=>$class,'city'=>$city,'phone'=>$phone]);
+                $result = Student_Details_Model::insert(['name'=>$name,'roll'=>$roll,'class'=>$class,'city'=>$city,'phone'=>$phone,'email_address'=>$email_address]);
 
                 if($result == true){
-                        return 'Data inserted successfully';
+                        return 'Data inserted successfully'.' '.response()->json($decode) ;
                 }else{
                         return 'Data insert failed ! Try again';
                 }

@@ -4,6 +4,7 @@
 >Eloquent doesn't support put method untill v9
 <br/>
 >Front End Design Idea <a href='https://www.elementpack.pro/'>Link</a>
+<<<<<<< HEAD
 >Lumen Generator <a href='https://github.com/flipboxstudio/lumen-generator'>Link</a>
 
 ### Model Properties
@@ -33,5 +34,19 @@ $app->register(App\Providers\AuthServiceProvider::class)
 Basic logic are includeed under boot method
 </small>
 
+=======
+
+<br/>
+
+# Model Properties
+
+## `To define table name`  protected $table = 'table name'
+## `To define primary column`  protected $primaryKey = 'id'
+## `To define increment status` public $incrementing = false
+## `To define primary column data type` protected $keyTypes = 'string'
+## `To define timestamps status` public $timestamps = false
+## `TO define date format` protected $dateFormat = 'U'
+## `To define db connection` protected $connection = 'connection-name'
+>>>>>>> 700da7c84a1d178768fe5cc159cb61444e278e6c
 
 

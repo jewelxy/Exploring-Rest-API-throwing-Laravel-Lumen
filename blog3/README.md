@@ -32,3 +32,37 @@ $app->register(App\Providers\AuthServiceProvider::class)
 <small>
 Basic logic are includeed under boot method
 </small>
+
+
+### Acess token Gneration concept
+
+@Uncomment those App service provider
+```
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\EventServiceProvider::class);
+```
+@Uncomment middleware
+
+```
+$app->middleware([
+    App\Http\Middleware\ExampleMiddleware::class
+]);
+
+$app->routeMiddleware([
+    'auth' => App\Http\Middleware\Authenticate::class,
+]);
+```
+
+@Uncomment Facades and elequent
+```
+$app->withFacades();
+
+$app->withEloquent();
+```
+
+@Add access token model and controller following database acess_token table
+
+### Note For JWT token access_token table not necessary
+
+@make token .env file

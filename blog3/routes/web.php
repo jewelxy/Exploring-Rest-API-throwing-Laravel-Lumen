@@ -39,3 +39,9 @@ $router->post('/update/{id}','Student_Details_Controller@updateDataBySlug');
 //User registration
 $router->post('/registration','Student_registration_controller@onRegister');
 $router->post('/login', 'Login_Controller@onLogin');
+
+//Authentic user operation
+$router->post('/insert',['middleware' => 'auth', 'uses'=>'Student_Info_Controller@onInsert']);
+$router->post('/select',['middleware' => 'auth', 'uses'=>'Student_Info_Controller@onSelect']);
+$router->post('/delete',['middleware' => 'auth', 'uses'=>'Student_Info_Controller@onDelete']);
+

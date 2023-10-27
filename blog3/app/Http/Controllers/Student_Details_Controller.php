@@ -34,7 +34,7 @@ class Student_Details_Controller extends Controller
         public function insertData(Request $request){
                 $token = $request->input('access_token');
                 $key = env('TOKEN_KEY');
-                // $decode = JWT::decode($token,$key,array('HS256'));
+                $decode = JWT::decode($token,$key,array('HS256'));
                 $decode = JWT::decode($token, new Key($key, 'HS256'));
 
 

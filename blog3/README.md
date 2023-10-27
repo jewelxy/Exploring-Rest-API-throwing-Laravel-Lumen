@@ -66,3 +66,13 @@ $app->withEloquent();
 ### Note For JWT token access_token table not necessary
 
 @make token .env file
+
+
+<hr/>
+
+# For check user is exist on depending table column
+```
+$userCount = Student_registration_model::where(['username'=>$username,'password'=>$password])->count();
+return $userCount;
+```
+<b style="color:#007ACC">After where we use associative array where key username is table_column_name under the table 'student_registration' and value is variable '$username' and the password as same condition of username.</b>
